@@ -1,9 +1,9 @@
 .Logo {
-    max-width: 168px;
+    max-width: 250px;
   }
   @media (max-width: 800px) {
     .Logo {
-      max-width: 105px;
+      max-width: 150px;
     }
   }
   
@@ -23,8 +23,8 @@
     padding-left: 5%;
     padding-right: 5%;
   
-    background: #1b1b2f;
-    border-bottom: 2px solid #162447;
+    background:var(--dark);
+    border-bottom: 1px solid var(--blue);
   }
   body {
     --bodyPaddingTop: 94px;
@@ -42,8 +42,8 @@
   }
   
   .ButtonLink {
-    color: var(--white);
-    border: 1px solid var(--white);
+    color: var(--primary);
+    border: 1px solid var(--primary);
     box-sizing: border-box;
     cursor: pointer;
     padding: 16px 24px;

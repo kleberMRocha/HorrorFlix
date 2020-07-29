@@ -12,8 +12,11 @@ font-size: 16px;
 outline: none;
 border-radius: 5px;
 text-decoration: none;
+transition: .3s;
 display: inline-block;
 &:hover,
-&:focus {background-color: #e43f5a;}`;
+&:focus {
+    background-color: #e43f5a;
+    }`;
 
 export default Button;

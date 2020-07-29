@@ -10,12 +10,12 @@
       },
       "videos": [
         {
-          "titulo": "Sputnik",
-          "url": "https://www.youtube.com/watch?v=gLkfSCOApZY"
+          "titulo": "SAINT MAUD",
+          "url": "https://www.youtube.com/watch?v=EXs2-TY9qok"
         },
         {
-          "titulo": "POSSESSOR",
-          "url": "https://www.youtube.com/watch?v=HoVPu-HUt_g"
+          "titulo": "Sputnik",
+          "url": "https://www.youtube.com/watch?v=gLkfSCOApZY"
         },
         {
           "titulo": "Ameaça Profunda",
@@ -33,7 +33,7 @@
       ]
     },
     {
-      "titulo": "clássicos",
+      "titulo": "Clássicos",
       "cor": "#1b1b2f",
       "link_extra": {
         "text": "Filmes clássicos",
@@ -59,28 +59,28 @@
       ]
     },
     {
-      "titulo": "sobrenatural",
+      "titulo": "Sobrenatural",
       "cor": "#6f4a8e",
       "link_extra": {
         "text": "Sobrenatural",
-        "url": "https://www.imdb.com/"
+        "url": "https://www.imdb.com/search/keyword/?keywords=supernatural-horror"
       },
       "videos": [
         {
-          "titulo": "Teste de Turing",
-          "url": "https://www.youtube.com/watch?v=BaPGU4JWa34"
+          "titulo": "Possesão de Deborah Logan",
+          "url": "https://www.youtube.com/watch?v=DnZNojsjlQM"
         },
         {
-          "titulo": "O que é Data Science?",
-          "url": "https://www.youtube.com/watch?v=5b9Z8toVaAU&t=9s"
+          "titulo": "Hereditário",
+          "url": "https://www.youtube.com/watch?v=Ui13PlmyZhQ"
         },
         {
-          "titulo": "Melhor forma de aprender Python",
-          "url": "https://www.youtube.com/watch?v=Gojqw9BQ5qY"
+          "titulo": "DOCTOR SLEEP",
+          "url": "https://www.youtube.com/watch?v=BOzFZxB-8cw"
         },
         {
-          "titulo": "Como ingressar no mercado de Data Science?",
-          "url": "https://www.youtube.com/watch?v=gxyjGmOV540"
+          "titulo": "Entidade",
+          "url": "https://www.youtube.com/watch?v=-Q_dwLGd2Rs"
         }
       ]
     }

@@ -54,7 +54,8 @@ ContentAreaContainer.Description = styled.p`
 ContentAreaContainer.Title = styled.h2`
   font-style: normal;
   font-weight: 300;
-  font-size: 40px;
+  font-size: 80px;
+  font-weight:bold;
   line-height: 1;
   margin-top: 0;
   margin-bottom: 32px;
@@ -91,7 +92,7 @@ export const BannerMainContainer = styled.section`
   &:before {
     top: 0;
     height: 100%;
-    background: rgba(0,0,0,0.5);
+    background: var(--darkT);
   }
 
   &:after {
@@ -114,7 +115,7 @@ export const WatchButton = styled.button`
   display: inline-block;
   border: 1px solid transparent;
   color: var(--black);
-  background: var(--white);
+  background: var(--dark);
   border-color: var(--black);
   transition: opacity .3s;
   display: none;
