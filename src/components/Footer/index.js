@@ -1,13 +1,14 @@
 import React from 'react';
 import { FooterBase,ImgFooter} from './styles';
 import logo from '../../assets/img/logo.png';
+import {Link} from 'react-router-dom'
 
 function Footer() {
   return (
     <FooterBase>
-      <a href="/">
+      <Link to="/">
       <ImgFooter src={logo} alt="Canguruflix Logo" />
-      </a>
+      </Link>
       <p>
         Orgulhosamente criado durante a
         {' '}

@@ -16,6 +16,7 @@ const Container = styled.ul`
     height: 30px;
     transform: initial;
     &:before {
+        color:var(--primary);
       font-size: 30px;
     }
   }
