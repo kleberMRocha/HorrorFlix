@@ -1,20 +1,19 @@
 import React from 'react';
-import {PageDefault} from '../../components/PageDefault';
 import { Link } from 'react-router-dom';
+import { PageDefault } from '../../components/PageDefault';
 
-
-export function CadastroVideo(){
-  return(
+export function CadastroVideo() {
+  return (
     <div>
       <PageDefault>
-      Cadatro Video
-      <Link to="/cadastro/categoria">
-        Cadastrar Categoria
-      </Link>
+        Cadatro Video
+        <Link to="/cadastro/categoria">
+          Cadastrar Categoria
+        </Link>
       </PageDefault>
     </div>
 
-  ) 
-  
+  );
 }
 
+export default CadastroVideo;

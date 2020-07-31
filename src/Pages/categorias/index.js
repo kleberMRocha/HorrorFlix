@@ -24,7 +24,7 @@ export function CadastroCategoria() {
   }
 
   return (
-    <div>
+    <>
 
       <PageDefault>
 
@@ -72,7 +72,7 @@ export function CadastroCategoria() {
           </form>
 
           <ul>
-            {categorias.map((categoria, index) => <li key={`${categoria},${index}`}>{categoria.nome}</li>)}
+            {categorias.map((categoria) => <li key={`${categoria}`}>{categoria.nome}</li>)}
           </ul>
 
           <Link to="/cadastro/videos">
@@ -80,7 +80,7 @@ export function CadastroCategoria() {
           </Link>
         </div>
       </PageDefault>
-    </div>
+    </>
 
   );
 }
