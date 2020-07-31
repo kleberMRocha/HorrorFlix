@@ -1,0 +1,11 @@
+{
+    "categorias":[{
+
+        "id":1,
+        "nome": "Novidades 2020",
+        "descricao": "Ano 2020",
+        "cor": "#187455"
+
+    }]
+   
+}

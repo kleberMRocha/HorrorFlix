@@ -19,4 +19,3 @@ export const Img404 = styled.img`
  height:250px;
 
 `;
-

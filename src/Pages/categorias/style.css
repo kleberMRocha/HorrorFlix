@@ -1,0 +1,47 @@
+.wrapper{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.titulo{
+    color:var(--white);
+    font-size: 2.5rem;
+
+}
+
+
+.formLabel{
+    color: white;
+}
+
+.inputCat{
+display: inline-block;
+outline: 0;
+text-decoration: none;
+width: 100%;
+box-sizing: border-box;
+border-radius: 2px;
+border: 1px solid #555;
+background: rgba(48,47,45,.9);
+padding: 6px 15px;
+font-size: 17px;
+margin: 7px auto;
+color: #ccc;
+height: auto;
+line-height: normal;
+border-bottom: 2px solid var(--blue);
+}
+.inputCat:focus{
+    border-bottom: 2px solid var(--primary);
+}
+
+.btnSend{
+    margin-top: 5px;
+    width: 100%;
+    background-color: transparent;
+
+}

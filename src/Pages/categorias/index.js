@@ -1,81 +1,87 @@
-import React, {useState} from 'react';
-import {PageDefault} from '../../components/PageDefault';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import {FormField} from '../../components/FormField';
+import { PageDefault } from '../../components/PageDefault';
+import FormField from '../../components/FormField';
+import './style.css';
+import Button from '../../components/buttons';
 
-
-export function CadastroCategoria(){
-
+export function CadastroCategoria() {
   const valoresIniciais = {
-    nome:'',
-    descricao:'',
-    cor:''
+    nome: '',
+    descricao: '',
+    cor: '',
+  };
+
+  const [values, setValues] = useState(valoresIniciais);
+  const [categorias, setCategoria] = useState([{ nome: 'teste' }]);
+
+  function setValue(key, value) { setValues({ ...values, [key]: value }); }
+
+  function handleChange(event) {
+    const chave = event.currentTarget.getAttribute('name');
+    const { value } = event.currentTarget;
+    setValue(chave, value);
   }
 
-  const [values,setValues] = useState(valoresIniciais);
-  const [categoria,setCategoria] = useState([{"nome":'teste'}]);
-  
-  function setValue(key,value){setValues({...values,[key]:value,})}
-
-  function handleChange(event){
-    let chave = event.currentTarget.getAttribute('name');
-    let value = event.currentTarget.value;
-    setValue(chave,value);
-  }
-  
-
-  return(
+  return (
     <div>
+
       <PageDefault>
-      Cadatro Categoria : {values.nome}
-      <form  onSubmit={function handleSubmit(event){
-        event.preventDefault();
-        setCategoria([...categoria,values]);
-        setValues(valoresIniciais);
-      }}>
 
-  
+        <div className="wrapper">
+          <h2 className="titulo">
+            Cadatro Categoria :
+            {' '}
+            {values.nome}
+          </h2>
+          <form onSubmit={function handleSubmit(event) {
+            event.preventDefault();
+            setCategoria([...categorias, values]);
+            setValues(valoresIniciais);
+          }}
+          >
 
-        <FormField
-          label="Nome da Categoria"
-          name="nome"
-          type="text"
-          value={values.nome}
-          onChange={handleChange}
-        />
-         <FormField
-          label="Descricao"
-          name="descricao"
-          type="textarea"
-          value={values.descricao}
-          onChange={handleChange}
-        />
-         <FormField
-          label="Cor"
-          name="cor"
-          type="color"
-          value={values.cor}
-          onChange={handleChange}
-        />
+            <FormField
+              className="inputCat"
+              label="Nome da Categoria"
+              name="nome"
+              type="text"
+              value={values.nome}
+              onChange={handleChange}
+            />
+            <FormField
+              className="inputCat"
+              label="Descricao"
+              name="descricao"
+              type="textarea"
+              value={values.descricao}
+              onChange={handleChange}
+            />
+            <FormField
+              className="inputCat"
+              label="Cor"
+              name="cor"
+              type="color"
+              value={values.cor}
+              onChange={handleChange}
+            />
 
-        <button type="submit">
-          Enviar
-        </button>
-      </form>
+            <Button type="submit" className="btnSend">
+              Enviar
+            </Button>
+          </form>
 
-        <ul>
-        {categoria.map((categoria,index)=>{
-          return <li key={`${categoria},${index}`}>{categoria.nome}</li>
-        })}
-        </ul>
+          <ul>
+            {categorias.map((categoria, index) => <li key={`${categoria},${index}`}>{categoria.nome}</li>)}
+          </ul>
 
-      <Link to="/cadastro/videos">
-        Cadastrar video
-      </Link>
+          <Link to="/cadastro/videos">
+            Cadastrar video
+          </Link>
+        </div>
       </PageDefault>
     </div>
 
-  ) 
-  
+  );
 }
-
+export default CadastroCategoria;
