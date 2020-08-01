@@ -1,11 +1,93 @@
 {
-    "categorias":[{
-
-        "id":1,
-        "nome": "Novidades 2020",
-        "descricao": "Ano 2020",
-        "cor": "#187455"
-
-    }]
-   
+  "categorias": [
+    {
+      "id": 1,
+      "titulo": "Lançamentos 2020",
+      "descricao": "Ano 2020",
+      "cor": "#187455",
+      "link_extra": {
+        "text": "Lançamentos de filmes em 2020",
+        "url": "https://www.imdb.com/search/title/?title_type=feature&year=2020-01-01,2020-12-31&genres=horror"
+      }
+    },
+    {
+      "id": 2,
+      "titulo": "Séries",
+      "descricao": "ano 2020",
+      "cor": "#d34444",
+      "link_extra": {
+        "text": "Lançamentos de filmes em 2020",
+        "url": "https://www.imdb.com/search/title/?title_type=feature&year=2020-01-01,2020-12-31&genres=horror"
+      }
+    },
+    {
+      "id": 3,
+      "titulo": "Jogos",
+      "descricao": "Terror Sobrenatural",
+      "cor": "#52c9d1",
+      "link_extra": {
+        "text": "Lançamentos de filmes em 2020",
+        "url": "https://www.imdb.com/search/title/?title_type=feature&year=2020-01-01,2020-12-31&genres=horror"
+      }
+    }
+  ],
+  "videos": [
+    {
+      "id": 1,
+      "categoriaId": 1,
+      "titulo": "SHE DIES TOMORROW",
+      "url": "https://www.youtube.com/watch?v=hcMFjCPkP3M",
+      "descricao": "Depois de acordar convencida que irá morrer amanhã, Amy vê sua vida desmoronar completamente."
+    },
+    {
+      "id": 2,
+      "categoriaId": 1,
+      "titulo": "Relic",
+      "url": "https://www.youtube.com/watch?v=cgSXwlcIvtg",
+      "descricao": "Depois de acordar convencida que irá morrer amanhã, Amy vê sua vida desmoronar completamente."
+    },
+    {
+      "id": 3,
+      "categoriaId": 1,
+      "titulo": "AMEAÇA PROFUNDA",
+      "url": "https://www.youtube.com/watch?v=RLcmCxDRzTA",
+      "descricao": "Depois de acordar convencida que irá morrer amanhã, Amy vê sua vida desmoronar completamente."
+    },
+    {
+      "id": 4,
+      "categoriaId": 1,
+      "titulo": "TRAIN TO BUSAN PRESENTS: PENINSULA (2020)",
+      "url": "https://www.youtube.com/watch?v=yVucSRLLeIM",
+      "descricao": "Depois de acordar convencida que irá morrer amanhã, Amy vê sua vida desmoronar completamente."
+    },
+    {
+      "id": 1,
+      "categoriaId": 2,
+      "titulo": "LORE",
+      "url": "https://www.youtube.com/watch?v=tlGbDZ6oCpo",
+      "descricao": "Depois de acordar convencida que irá morrer amanhã, Amy vê sua vida desmoronar completamente."
+    },
+    {
+      "id": 2,
+      "categoriaId": 2,
+      "titulo": "The Terror: Infamy",
+      "url": "https://www.youtube.com/watch?v=ZLyVHQdnfoI",
+      "descricao": "Depois de acordar convencida que irá morrer amanhã, Amy vê sua vida desmoronar completamente."
+    },
+    {
+      "id": 1,
+      "categoriaId": 3,
+      "titulo": "Resident Evil 7",
+      "url": "https://www.youtube.com/watch?v=9YetHMnhnhM",
+      "descricao": "Depois de acordar convencida que irá morrer amanhã, Amy vê sua vida desmoronar completamente."
+    },
+    {
+      "id": 2,
+      "categoriaId": 3,
+      "titulo": "Blair Witch",
+      "url": "https://www.youtube.com/watch?v=LFqVXEfv-xw",
+      "descricao": "Depois de acordar convencida que irá morrer amanhã, Amy vê sua vida desmoronar completamente."
+    }
+    
+  ]
 }

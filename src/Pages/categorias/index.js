@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { PageDefault } from '../../components/PageDefault';
 import FormField from '../../components/FormField';
 import './style.css';
 import Button from '../../components/buttons';
+import useForm from '../../hooks/useForm';
 
 export function CadastroCategoria() {
   const valoresIniciais = {
@@ -12,16 +13,24 @@ export function CadastroCategoria() {
     cor: '',
   };
 
-  const [values, setValues] = useState(valoresIniciais);
-  const [categorias, setCategoria] = useState([{ nome: 'teste' }]);
+  const { handleChange, values, clearForm } = useForm(valoresIniciais);
+  const [categorias, setCategoria] = useState([{ nome: '' }]);
 
-  function setValue(key, value) { setValues({ ...values, [key]: value }); }
-
-  function handleChange(event) {
-    const chave = event.currentTarget.getAttribute('name');
-    const { value } = event.currentTarget;
-    setValue(chave, value);
-  }
+  // ============
+  useEffect(() => {
+    if (window.location.href.includes('localhost')) {
+      const URL = 'http://localhost:8080/categorias';
+      fetch(URL)
+        .then(async (respostaDoServer) => {
+          if (respostaDoServer.ok) {
+            const resposta = await respostaDoServer.json();
+            setCategoria(resposta);
+            return;
+          }
+          throw new Error('Não foi possível pegar os dados');
+        });
+    }
+  }, []);
 
   return (
     <>
@@ -37,7 +46,7 @@ export function CadastroCategoria() {
           <form onSubmit={function handleSubmit(event) {
             event.preventDefault();
             setCategoria([...categorias, values]);
-            setValues(valoresIniciais);
+            clearForm(valoresIniciais);
           }}
           >
 
