@@ -13,22 +13,28 @@
     {
       "id": 2,
       "titulo": "Séries",
-      "descricao": "ano 2020",
+      "descricao": "Terror e suspense",
       "cor": "#d34444",
       "link_extra": {
-        "text": "Lançamentos de filmes em 2020",
+        "text": "Terror e suspense",
         "url": "https://www.imdb.com/search/title/?title_type=feature&year=2020-01-01,2020-12-31&genres=horror"
       }
     },
     {
       "id": 3,
       "titulo": "Jogos",
-      "descricao": "Terror Sobrenatural",
+      "descricao": "Jogos com tematica de Horror",
       "cor": "#52c9d1",
       "link_extra": {
-        "text": "Lançamentos de filmes em 2020",
+        "text": "Jogos com tematica de Horror",
         "url": "https://www.imdb.com/search/title/?title_type=feature&year=2020-01-01,2020-12-31&genres=horror"
       }
+    },
+    {
+      "titulo": "Clássicos",
+      "descricao": "Filmes Clássicos",
+      "cor": "#123163",
+      "id": 5
     }
   ],
   "videos": [
@@ -56,7 +62,7 @@
     {
       "id": 4,
       "categoriaId": 1,
-      "titulo": "TRAIN TO BUSAN PRESENTS: PENINSULA (2020)",
+      "titulo": "PENINSULA",
       "url": "https://www.youtube.com/watch?v=yVucSRLLeIM",
       "descricao": "Depois de acordar convencida que irá morrer amanhã, Amy vê sua vida desmoronar completamente."
     },
@@ -87,7 +93,48 @@
       "titulo": "Blair Witch",
       "url": "https://www.youtube.com/watch?v=LFqVXEfv-xw",
       "descricao": "Depois de acordar convencida que irá morrer amanhã, Amy vê sua vida desmoronar completamente."
+    },
+    {
+      "titulo": "Dead by Daylight",
+      "url": "https://www.youtube.com/watch?v=JGhIXLO3ul8",
+      "categoria": "Jogos",
+      "categoriaId": 3,
+      "id": 5
+    },
+    {
+      "titulo": "Hellraiser",
+      "url": "https://www.youtube.com/watch?v=8mOn4h0lgKQ",
+      "categoria": "Clássicos",
+      "categoriaId": 5,
+      "id": 6
+    },
+    {
+      "titulo": "Suspiria",
+      "url": "https://www.youtube.com/watch?v=7z1IosVzSo0",
+      "categoria": "Clássicos",
+      "categoriaId": 5,
+      "id": 7
+    },
+    {
+      "titulo": "O Enigma de Outro Mundo ",
+      "url": "https://www.youtube.com/watch?v=V0m6YCDzvK0",
+      "categoria": "Clássicos",
+      "categoriaId": 5,
+      "id": 8
+    },
+    {
+      "titulo": "Penny Dreadful ",
+      "url": "https://www.youtube.com/watch?v=rOM0rziqEY4",
+      "categoria": "Séries",
+      "categoriaId": 2,
+      "id": 9
+    },
+    {
+      "titulo": "The Evil Dead",
+      "url": "https://www.youtube.com/watch?v=_388yct3IQ8",
+      "categoria": "Clássicos",
+      "categoriaId": 5,
+      "id": 10
     }
-    
   ]
 }

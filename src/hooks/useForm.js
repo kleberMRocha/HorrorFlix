@@ -5,12 +5,14 @@ function useForm(valoresIniciais) {
   function setValue(key, value) { setValues({ ...values, [key]: value }); }
 
   function handleChange(event) {
-    const chave = event.currentTarget.getAttribute('name');
+    const key = event.currentTarget.getAttribute('name');
     const { value } = event.currentTarget;
-    setValue(chave, value);
+    setValue(key, value);
   }
   function clearForm() {
-    setValue(valoresIniciais);
+    values.titulo = '';
+    values.descricao = '';
+    values.cor = '#ffa464';
   }
 
   return {

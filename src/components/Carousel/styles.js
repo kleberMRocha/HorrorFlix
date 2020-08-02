@@ -47,6 +47,15 @@ export const VideoCardList = styled.ul`
   }
 `;
 
+export const VideoTitle = styled.span`
+display:fixed;
+width:100%;
+justify-content:center;
+font-size:.7em;
+font-weight:bold;
+text-align:center;
+`;
+
 export const VideoCardGroupContainer = styled.section`
   color: white;
   min-height: 197px;

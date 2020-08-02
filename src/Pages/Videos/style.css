@@ -18,7 +18,9 @@
 
 .formLabel{
     color: white;
+
 }
+
 
 .inputCat{
 display: inline-block;
@@ -46,4 +48,33 @@ border-bottom: 2px solid var(--blue);
     width: 100%;
     background-color: transparent;
 
+}
+
+.linkPage{
+    background-color: var(--primary);
+    font-weight: bold;
+    line-height: 5rem;
+    text-decoration: none;
+    transition: .3s;
+    padding: 1rem;
+    
+ }
+ 
+ .linkPage:hover,.linkPage:active{
+    background-color: transparent;
+    border: var(--primary) 1px solid;
+  
+  }
+
+.titulo{
+    color:var(--white);
+    font-size: 2.5rem;
+
+}
+@media(max-width:800px){
+    .titulo{
+  
+        font-size: 2.0rem;
+    
+    }  
 }

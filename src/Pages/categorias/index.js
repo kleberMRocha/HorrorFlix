@@ -1,20 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { PageDefault } from '../../components/PageDefault';
 import FormField from '../../components/FormField';
 import './style.css';
 import Button from '../../components/buttons';
 import useForm from '../../hooks/useForm';
+import Categorys from '../../repositories/categorias';
 
 export function CadastroCategoria() {
   const valoresIniciais = {
-    nome: '',
+    titulo: '',
     descricao: '',
-    cor: '',
+    cor: '#ffa464',
   };
 
   const { handleChange, values, clearForm } = useForm(valoresIniciais);
-  const [categorias, setCategoria] = useState([{ nome: '' }]);
+  const [categorias, setValue] = useState([]);
 
   // ============
   useEffect(() => {
@@ -24,7 +25,7 @@ export function CadastroCategoria() {
         .then(async (respostaDoServer) => {
           if (respostaDoServer.ok) {
             const resposta = await respostaDoServer.json();
-            setCategoria(resposta);
+            setValue(resposta);
             return;
           }
           throw new Error('Não foi possível pegar os dados');
@@ -41,21 +42,24 @@ export function CadastroCategoria() {
           <h2 className="titulo">
             Cadatro Categoria :
             {' '}
-            {values.nome}
+            {values.titulo}
           </h2>
           <form onSubmit={function handleSubmit(event) {
             event.preventDefault();
-            setCategoria([...categorias, values]);
-            clearForm(valoresIniciais);
+            Categorys.create(values)
+              .then(async (value) => {
+                clearForm();
+                setValue([...categorias, value]);
+              });
           }}
           >
 
             <FormField
               className="inputCat"
               label="Nome da Categoria"
-              name="nome"
+              name="titulo"
               type="text"
-              value={values.nome}
+              value={values.titulo}
               onChange={handleChange}
             />
             <FormField
@@ -76,15 +80,35 @@ export function CadastroCategoria() {
             />
 
             <Button type="submit" className="btnSend">
-              Enviar
+              Cadastrar
             </Button>
           </form>
 
-          <ul>
-            {categorias.map((categoria) => <li key={`${categoria}`}>{categoria.nome}</li>)}
-          </ul>
+          <table className="tableCategory">
+            <thead>
+              <tr>
+                <th key="Categoria">Categoria</th>
+                <th key="Descricao">Descricao</th>
+                <th key="Cor">Cor</th>
+              </tr>
+            </thead>
+            {
+              categorias.map((categoria) => (
+                <>
+                  <tbody>
+                    <tr key={`id_${categoria.id}`}>
+                      <td key={`id_${categoria.id}_${categoria.titulo}`}>{categoria.titulo}</td>
+                      <td key={`id_${categoria.id}_${categoria.descricao}`}>{categoria.descricao}</td>
+                      <td style={{ backgroundColor: categoria.cor }} key={`id_${categoria.id}__${categoria.cor}`}>{categoria.cor}</td>
+                    </tr>
+                  </tbody>
+                </>
+              ))
+            }
+            <tfoot><></></tfoot>
+          </table>
 
-          <Link to="/cadastro/videos">
+          <Link className="linkPage" to="/cadastro/videos">
             Cadastrar video
           </Link>
         </div>

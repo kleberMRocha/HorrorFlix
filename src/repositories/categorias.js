@@ -27,5 +27,20 @@ function getAll() {
     });
 }
 
+function create(categoria) {
+  return fetch(URL_CATEGORIES_ONLY, {
+    method: 'Post',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(categoria),
+  })
+    .then(async (responseServer) => {
+      if (responseServer.ok) {
+        const resposta = await responseServer.json();
+        return resposta;
+      }
 
-export default { getAllWhithVideos, getAll };
+      throw new Error('não foi possivel acessar os dados!');
+    });
+}
+
+export default { getAllWhithVideos, getAll, create };

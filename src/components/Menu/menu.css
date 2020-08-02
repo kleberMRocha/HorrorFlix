@@ -55,6 +55,12 @@
     text-decoration: none;
     display: inline-block;
     transition: opacity .3s;
+    margin-left: 1rem;
+  }
+  @media(max-width: 800px){
+    .ButtonLink{
+      margin-left: 0;
+    }
   }
   .ButtonLink:hover,
   .ButtonLink:focus {
@@ -62,7 +68,7 @@
   }
   
   @media (max-width: 800px) {
-    a.ButtonLink {
+    a.ButtonLink.one {
       position: fixed;
       left: 0;
       right: 0;
@@ -71,5 +77,14 @@
       border-radius: 0;
       border: 0;
       text-align: center;
+    }
+    a.ButtonLink.two {
+      position:absolute;
+      right:0;
+      top:0;
+      padding: .5rem;
+      border:none;
+      margin: 0;
+     text-decoration:  var(--primary) solid underline;
     }
   }
